@@ -1,3 +1,5 @@
+# Production Application Configuration
+
 application:
   name: DevOpsSimulator
   version: 1.0.0
@@ -11,8 +13,19 @@ server:
 logging:
   level: INFO
   format: json
+  output: /var/log/app.log
   
-# Development configuration (enabled via environment variable)
+database:
+  host: prod-db.example.com
+  port: 5432
+  name: devops_prod
+  
+features:
+  auto_scaling: true
+  load_balancer: enabled
+  backup_enabled: true
+
+# Development Configuration (Enabled via Environment Variable)
 development:
   enabled: false
   port: 3000

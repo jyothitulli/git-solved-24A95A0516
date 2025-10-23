@@ -4,13 +4,21 @@
       "host": "prod-db.example.com",
       "port": 5432,
       "database": "devops_production",
+      "username": "prod_admin",
       "ssl_mode": "require",
-      "pool_size": 20
+      "pool_size": 20,
+      "timeout": 30
     },
     "backup": {
       "enabled": true,
       "schedule": "0 2 * * *",
-      "retention_days": 30
+      "retention_days": 30,
+      "location": "/backups/database"
+    },
+    "replication": {
+      "enabled": true,
+      "replicas": 2,
+      "sync_mode": "synchronous"
     }
   },
   "development": {
