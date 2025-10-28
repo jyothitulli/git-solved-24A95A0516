@@ -1,3 +1,0 @@
-Evaluation Summary:
-All qualitative and quantitative metrics met.
-Ready for submission ✅
